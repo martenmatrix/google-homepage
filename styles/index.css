@@ -1,0 +1,82 @@
+:root {
+    --grey-main-color: rgba(0,0,0,0.87);
+    --grey-color: #70757a;
+    font-family: arial,sans-serif;
+}
+
+#navbar {
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#navbar ul, a {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--grey-main-color-color);
+}
+
+#navbar li, img {
+    margin: 1em;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+}
+
+#navbar img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 0.2em solid black;
+    display: block;
+    position: relative;
+}
+
+#nav-right {
+    display: flex;
+    justify-content: end;
+}
+
+#nav-left {
+    display: flex;
+    justify-content: start;
+}
+
+#search-section {
+    margin: 10em 25% 0 25%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: repeat(3, 25%);
+    grid-template-areas: 
+    ". logo logo ."
+    "search-field search-field search-field search-field"
+    ". search lucky .";
+}
+
+#google-logo {
+    grid-area: logo;
+    place-self: center;
+}
+
+#search-button {
+    grid-area: search;
+    place-self: center;
+}
+
+#lucky-button {
+    grid-area: lucky;
+    place-self: center;
+}
+
+#search {
+    grid-area: search-field;
+    place-self: center;
+}
+

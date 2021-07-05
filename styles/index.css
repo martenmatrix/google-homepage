@@ -4,6 +4,11 @@
     font-family: arial,sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 #navbar {
     top: 0;
     position: fixed;
@@ -11,6 +16,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    font-size: 14px;
 }
 
 #navbar ul, a {
@@ -24,6 +30,7 @@
 
 #navbar li, img {
     margin: 1em;
+    align-self: center;
 }
 
 #navbar a:hover {
@@ -50,33 +57,96 @@
 }
 
 #search-section {
-    margin: 10em 25% 0 25%;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-auto-rows: repeat(3, 25%);
-    grid-template-areas: 
-    ". logo logo ."
-    "search-field search-field search-field search-field"
-    ". search lucky .";
-}
-
-#google-logo {
-    grid-area: logo;
-    place-self: center;
-}
-
-#search-button {
-    grid-area: search;
-    place-self: center;
-}
-
-#lucky-button {
-    grid-area: lucky;
-    place-self: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10% 0 24% 0;
 }
 
 #search {
-    grid-area: search-field;
+    display: flex;
     place-self: center;
+    border: 1px solid #dfe1e5;
+    width: auto;
+    height: 44px;
+    width: 80%;
+    max-width: 584px;
+    border-radius: 24px;
+}
+
+#search-section button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+#search-section button:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+
+
+#search input {
+    width: 100%;
+    height: 34px;
+    border: none;
+    background-color: transparent;
+    align-self: center;
+}
+
+#search input:focus {
+    outline: none;
+}
+
+#search-buttons {
+    margin: 1em auto 0 auto;
+    text-align: center;
+}
+
+#information {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+footer p {
+    margin-left: 1em;
+}
+
+#information a {
+    margin-left: 1em;
+}
+
+#search-icon {
+    opacity: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+footer {
+    background-color: #dadce0;
+    font-size: 15px;
+    padding: 0.5em 0 0.5em 0;
+}
+
+footer hr {
+    border: none;
+    background-color: black;
+    height: 1px;
+    opacity: 50%;
 }
 
